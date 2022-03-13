@@ -1,0 +1,1 @@
+export const fictusUrl = 'https://fictus.10hourlabs.com/talents';

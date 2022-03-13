@@ -1,0 +1,24 @@
+$color--white: #FFFFFF;
+$color--black: #000000;
+$color--light-grey: #E6E6E6;
+$color--grey : #CCCCCC;
+$color--dark-grey : #1A1A1A;
+$color--primary : #102335;
+$color--secondary : #E14923;
+
+
+@import './components/styles/header';
+@import './components/styles/user';
+
+.users {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+
+    .users-items-box {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+    }
+}
