@@ -1,3 +1,4 @@
+import debounce from "lodash.debounce";
 import { useContext, useState } from "react";
 import { UsersContext } from "../contexts/usersContext/UsersContext";
 import { fictusUrl } from "../helpers/constants/urls";
@@ -8,7 +9,7 @@ export const useFilterBlogPosts = ()=> {
     const [loading, setLoading] = useState(false);
 
 
-    const handleFilter = async (e: { target: HTMLInputElement })=> {
+    const handleFilter =  debounce ( async (e: { target: HTMLInputElement })=> {
         setLoading(true);
         const value = e.target.value.toLocaleLowerCase();
         const name = e.target.name;
@@ -31,7 +32,7 @@ export const useFilterBlogPosts = ()=> {
         const url = `${fictusUrl}?job_title=${job_title}&city=${city}&country=${country}`;
 
         const {success, data, error} = await fetchHelper(url, 'GET');
-
+        console.log(url)
         if(success && data) {
             addUsers(data['items']);
             setLoading(false);
@@ -40,10 +41,11 @@ export const useFilterBlogPosts = ()=> {
             setLoading(false);
         }
         
-    };
+    }, 1500);
 
     return {
         handleFilter,
         loading
     }
+
 };

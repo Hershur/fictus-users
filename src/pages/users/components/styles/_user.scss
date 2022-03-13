@@ -15,6 +15,24 @@ img {
     background: #ECE9E6;
     background: linear-gradient(to right, #FFFFFF, #ECE9E6);
   
+
+    > .btn__remove-user {
+        position: absolute;
+        border-radius: 50%;
+        border: solid 0.5px #E14923;
+        font-size: 1.4em;
+        color: #737374;
+        font-weight: 100;
+        cursor: pointer;
+        font-family: "Helvetica Neue";
+        font-weight: 200;
+        height: 30px;
+        width: 33px;
+        padding: 0.9em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
   
   
@@ -47,9 +65,23 @@ img {
 .user-image {
     border-radius: 50%;
 }
+
+.user-info {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
   
 .user-info > small {
-    color: #666;
+    padding: .5em;
+    border-radius: 2em;
+    background-color: $color--secondary;
+    color: #fff;
+    text-align: center;
+    width: 5em;
+    cursor: pointer;
 }
 
 .job-title {
@@ -57,14 +89,6 @@ img {
 }
 
 
-.btn__saved-users {
-    background-color: $color--secondary;
-    border: none;
-    padding: 1em;
-    color: white;
-    border-radius: 1em;
-    font-weight: bold;
-}
 
 
 @media screen and (max-width: 800px) {

@@ -48,6 +48,16 @@ header {
     font-size: 2em;
     text-align: center;
 }
+
+.btn__saved-users {
+    background-color: $color--secondary;
+    border: none;
+    padding: 1em;
+    color: white;
+    border-radius: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
   
 
 @media screen and (max-width: 895px) {
